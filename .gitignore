@@ -402,3 +402,4 @@ FodyWeavers.xsd
 # specific to this project
 .venv/
 .vscode/settings.json
+env.py
