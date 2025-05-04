@@ -403,3 +403,5 @@ FodyWeavers.xsd
 .venv/
 .vscode/settings.json
 env.py
+viewsNoGeneric.py
+viewsOldNotGeneric.py
