@@ -20,7 +20,11 @@ class ProfileList(generics.ListAPIView):
     serializer_class = ProfileSerializer
     filter_backends = [filters.OrderingFilter, DjangoFilterBackend]
 
-    filterset_fields = ["owner__following__followed__profile"]
+    filterset_fields = [
+        "owner__following__followed__profile",
+        "owner__followed__owner__profile",
+    ]
+
     ordering_fields = [
         "posts_count",
         "followers_count",
