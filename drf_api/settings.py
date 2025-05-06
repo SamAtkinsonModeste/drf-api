@@ -64,12 +64,12 @@ REST_AUTH_SERIALIZERS = {
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = "DEV" in os.environ
+DEBUG = os.environ.get("DEV") == "1"
 
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "bn-api-code-institute.herokuapp.com",
+    "bn-api-code-institute-6164ccee29f7.herokuapp.com/",
 ]
 
 
