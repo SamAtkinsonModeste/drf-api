@@ -69,7 +69,7 @@ DEBUG = os.environ.get("DEV") == "1"
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "https://be-api-7ff643bbf9fb.herokuapp.com/",
+    "be-api-7ff643bbf9fb.herokuapp.com/",
 ]
 
 
