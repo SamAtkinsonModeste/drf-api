@@ -3,7 +3,7 @@
 import os
 
 print("Cloudinary URL:", os.environ.get("CLOUDINARY_URL"))
-import env
+
 import sys
 
 
