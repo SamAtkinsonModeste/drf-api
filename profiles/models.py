@@ -11,8 +11,8 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=255, blank=True)
     content = models.TextField(blank=True)
-    image = (
-        models.ImageField(upload_to="images/", default="../default_profile"),
+    image = models.ImageField(
+        upload_to="images/", default="../default_profile_us7dxw_phmfan.jpg"
     )
 
     class Meta:
