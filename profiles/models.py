@@ -11,11 +11,8 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=255, blank=True)
     content = models.TextField(blank=True)
-    image = models.ImageField(
-        upload_to="images/",
-        default=(
-            "https://res.cloudinary.com/dpnxbddic/image/upload/v1747019257/default_profile_us7dxw_phmfan.jpg"
-        ),
+    image = (
+        models.ImageField(upload_to="images/", default="../default_profile"),
     )
 
     class Meta:
