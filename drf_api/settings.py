@@ -204,9 +204,11 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-
-# CSRF_COOKIE_SAMESITE = "None"
-# CSRF_COOKIE_SECURE = True
-# SESSION_COOKIE_SAMESITE = "None"
-# SESSION_COOKIE_SECURE = True
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
